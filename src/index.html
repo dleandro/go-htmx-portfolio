@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Alex's Portfolio</title>
+        <!-- Include HTMX and required JavaScript -->
+        <script src="https://unpkg.com/htmx.org@1.6.0/dist/htmx.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="static/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <div class="screen-container" id="zoomDiv">
+            <div class="screen">
+                <h2>START</h2>
+                <div class="alien-container">
+                    <div class="alien">
+                        <div class="ear ear-left"></div>
+                        <div class="ear ear-right"></div>
+                        <div class="head-top"></div>
+                        <div class="head">
+                            <div class="eye eye-left"></div>
+                            <div class="eye eye-right"></div>
+                        </div>
+                        <div class="body"></div>
+                        <div class="arm arm-left"></div>
+                        <div class="arm arm-right"></div>
+                    </div>
+                </div>
+            </div>
+                <div class="joystick" hx-trigger="click" hx-get="zoom-in" hx-swap="outerHTML innerHTML transition:true" hx-set="arcade-transition" hx-target="#zoomDiv" id="joystick">
+                    <div class="stick" id="stick"></div>
+                </div>
+        </div>
+        <div class="board">
+            <div class="button button-a"></div>
+            <div class="button button-b"></div>
+            <div class="button button-c"></div>
+        </div>
+        <div class="bottom">
+            <div class="stripes"></div>
+        </div>
+    </body>
+</html>
